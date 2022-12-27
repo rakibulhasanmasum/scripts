@@ -15,17 +15,10 @@ function get_sprint_number_from_branch_name() {
 
 function get_previous_tags_from_sprint_number() {
   tag_pattern="${sprint_number}*"
-<<<<<<< HEAD
   mapfile -t previous_tags < <(git tag -l "$tag_pattern")
 #  for tag in "${previous_tags[@]}"; do
 #    echo "$tag"
 #  done
-=======
-  mapfile -t previous_tags < <( git tag -l "$tag_pattern")
-  for tag in "${previous_tags[@]}"; do
-    echo "$tag"
-  done
->>>>>>> 8a197f26 (test release tags)
   return
 }
 
